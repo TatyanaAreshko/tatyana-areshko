@@ -15,6 +15,7 @@ public class App {
         emp.setAge(20);
         System.out.println("Description employee: " + " / " + emp.getFio() + " / " + emp.getJob() + " / " + emp.email + " / " +
                            emp.tel + " / " + emp.getSalary() + " / ");
+        emp.info();
     }
 
 
