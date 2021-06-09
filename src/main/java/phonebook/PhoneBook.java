@@ -12,8 +12,14 @@ public class PhoneBook {
 
     public void add(String name, String... number) {
         //присваиваем значение поля имя переменной numbers
-        Set<String> numbers = new HashSet<>(Arrays.asList(number));
-        phones.put(name, numbers);
+        Set<String> numbers;
+        if (phones.get(name) == null){
+            numbers = new HashSet<>(Arrays.asList(number));
+            phones.put(name, numbers);
+        } else {
+            phones.get(name).addAll(Arrays.asList(number));
+        }
+
     }
 
     //создаем список имен сотрудников

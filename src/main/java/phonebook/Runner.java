@@ -12,8 +12,6 @@ public class Runner extends PhoneBook{
 
         PhoneBook phoneBook = new PhoneBook();
 
-        //Map<String, String> info = new HashMap<String, String>();
-
         phoneBook.add("Ivan", "123", "555");
 
         phoneBook.add("Petr", "456");
