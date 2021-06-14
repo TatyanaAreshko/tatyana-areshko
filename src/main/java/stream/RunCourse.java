@@ -1,9 +1,6 @@
 package stream;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -24,6 +21,7 @@ public class RunCourse {
                 new Student("Kate", Arrays.asList(c1, c2, c3))));
 
         System.out.println(getUniqStudCourse(students.stream()));
+        //System.out.println(getMaxStudCourses(students.stream()));
 
 
     }
@@ -37,6 +35,15 @@ public class RunCourse {
         .collect(Collectors.toList());
         return courses;
     }
+
+   /* static List<Course> getMaxStudCourses(Stream<Student> students) {
+        List<Course> courses;
+        List<Course> courseList = new ArrayList<>();
+        students.forEach((student)->courseList.addAll(student.getCourses()));
+        courses = courseList.stream()
+                //.filter();                ;
+        return courses;
+    }*/
 }
 
 
